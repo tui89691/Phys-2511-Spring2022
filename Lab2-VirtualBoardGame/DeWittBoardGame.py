@@ -53,8 +53,13 @@ print(ra.choice(u)) NEUTRAL
 n=ra.randint(1,5)
 
 
+def endturn(x):
+    tm.sleep(x)
+    print("Your turn is over.")
+    tm.sleep(x)
+    input("Press enter to pass the die.")
+    tm.sleep(x)
 
-#c=input("Press enter to roll.")
 
 z=ra.randint(1,6)
 #print("You rolled: ",z)
@@ -102,11 +107,7 @@ while(a<100) and (b<100):
             print(ra.choice(p),n,".")
             tm.sleep(1)
             print("P1, your new position is:", a)
-            tm.sleep(1)
-            print("P1, your turn is over.")
-            tm.sleep(1)
-            input("Press enter to pass the die.")
-            tm.sleep(1)
+            endturn(1)
             break
         elif a % 7 == 0:
             a=a-n
@@ -115,11 +116,7 @@ while(a<100) and (b<100):
             print(ra.choice(g),n,".")
             tm.sleep(1)
             print("P1, your new position is:", a)
-            tm.sleep(1)
-            print("P1, your turn is over.")
-            tm.sleep(1)
-            input("Press enter to pass the die.")
-            tm.sleep(1)
+            endturn(1)
             break
         elif a>=100:
             print(w)
@@ -127,11 +124,7 @@ while(a<100) and (b<100):
             break
         else:
             print(ra.choice(u))
-            tm.sleep(1)
-            print("P1, your turn is over.")
-            tm.sleep(1)
-            input("Press enter to pass the die.")
-            tm.sleep(1)
+            endturn(1)
             break
             
     
@@ -176,11 +169,7 @@ while(a<100) and (b<100):
             print(ra.choice(p),n,".")
             tm.sleep(1)
             print("P2, your new position is:", b)
-            tm.sleep(1)
-            print("P2, your turn is over.")
-            tm.sleep(1)
-            input("Press enter to pass the die.")
-            tm.sleep(1)
+            endturn(1)
             break
         elif a % 7 == 0:
             b=b-n
@@ -189,11 +178,7 @@ while(a<100) and (b<100):
             print(ra.choice(g),n,".")
             tm.sleep(1)
             print("P2, your new position is:", b)
-            tm.sleep(1)
-            print("P2, your turn is over.")
-            tm.sleep(1)
-            input("Press enter to pass the die.")
-            tm.sleep(1)
+            endturn(1)
             break
         elif b>=100:
             print(w)
@@ -201,11 +186,7 @@ while(a<100) and (b<100):
             break
         else:
             print(ra.choice(u))
-            tm.sleep(1)
-            print("P2, your turn is over.")
-            tm.sleep(1)
-            input("Press enter to pass the die.")
-            tm.sleep(1)
+            endturn(1)
             break
 
 
